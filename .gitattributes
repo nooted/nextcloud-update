@@ -1,1 +1,3 @@
-*.* linguist-language=yml
+*.php linguist-detectable=false
+*.ansible linguist-detectable=true
+*.yml linguist-detectable=true
