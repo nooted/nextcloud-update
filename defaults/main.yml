@@ -1,1 +1,38 @@
 
+---
+# defaults file for install-nextcloud
+# [CONFIG]
+nextcloud_channel: "releases"
+# nextcloud_channel: releases | prereleases | daily | latest
+nextcloud_version: 22.0.0
+# nextcloud_version for releases, prereleases and daily channel
+nextcloud_branch: "stable"
+# specified branch for daily & latest channel
+nextcloud_repository: "https://download.nextcloud.com/server"
+# Domain URL where to download Nextcloud.
+# Path will be calculated following channel, version and branch.
+
+
+# nextcloud_websrv: "apache2" | "nginx"
+nextcloud_websrv: "apache2"
+nextcloud_webroot: "/var/www/html/nextcloud"
+nextcloud_data_dir: "/var/www/html/nextcloud/data"
+nextcloud_backup_dir: "{{nextcloud_webroot}}_bkp"
+nextcloud_webroot_old: "{{nextcloud_webroot}}_old"
+
+# [DATABASE]
+# nextcloud_db_backend: "mysql"/"mariadb" | "pgsql"
+nextcloud_db_host: "localhost"
+nextcloud_db_backend: "mariadb"
+nextcloud_db_name: "nextcloud"
+nextcloud_db_admin: "nextcloud"
+nextcloud_db_pwd: "nextcloud"
+
+# [OPTIONS]
+nextcloud_restore_3rdparty_apps: true
+nextcloud_db_backup: true
+nextcloud_upgrade_clean: true
+
+# [SYSTEM]
+nextcloud_websrv_user: "www-data"
+nextcloud_websrv_group: "www-data"
