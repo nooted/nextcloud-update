@@ -1,13 +1,17 @@
 import NextCloud
 import json
 
-url = "INPUT_YOUR_CLOUD"
-userid = "INPUT_YOUR_USERNAME"
-passwd = "INPUT_YOUR_PASSWORD"
+url = "http://111.68.101.225/nextcloud/"
+userid = "nextcloud"
+passwd = "nextcloud"
+#passwd = "m8wb5-4ce5D-5wtQc-8QtHP-dmXz4"
 
 #True if you want to get response as JSON
 #False if you want to get response as XML
 tojs = True
 
 nxc = NextCloud.NextCloud(url,userid,passwd,tojs)
-print(nxc.getUsers())
+#dictt = (nxc.createShare(path="t1.md" , shareType=3 , shareWith=None, publicUpload=False , password=None ,  permissions=None))
+print = (nxc.getShares())
+#print (dictt['ocs']['data']['url'])
+#print (dictt)
