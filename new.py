@@ -72,17 +72,15 @@ class Handler(watchdog.events.PatternMatchingEventHandler):
            return
         print("Name:", search_string, "Mail:", name_dict[search_string])
         emails = name_dict[search_string]
-        #else:
-         #   email = ""
-          #  print("No email account")
+
         #if search_string in file_text:
         #  email = file_text.split(search_string)[1].split("\n")[0].strip()
         #  print(email)
       #  for email in emails:
          #   print("->" + " " + "New File Create with name : " + " " + split_new_file)
           #  content = "New File Create with Name" + " " +  split_new_file + " " + "at" + " " + current_date_time
-          #  user = 'salman143107@gmail.com'
-          #  app_password = 'pmnkacuntynxdudm'
+          #  user = ''
+          #  app_password = ''
          #   receiver_address = email
         #    subject = 'New File Creation'
        #     mail_content = '''New File Create''' + " " + split_new_file + " " + "at" + " " + current_date_time
@@ -98,9 +96,7 @@ class Handler(watchdog.events.PatternMatchingEventHandler):
 #            session.sendmail(user, receiver_address, text)
 #            session.quit()
 #            print('Mail Sent')
-#            with yagmail.SMTP(user, app_password) as yag:
-#                yag.send(receiver_address, subject, content)
-#                print("[INFO] Email Sent to :" + " " + receiver_address)
+
 
 
 if __name__ == '__main__':
